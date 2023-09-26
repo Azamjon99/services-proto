@@ -62,6 +62,9 @@ message UpdateDeliveryRatingResponse {
 }
 message ListDeliveryRatingByEaterRequest {
   string eater_id = 1 [json_name = "eater_id"];
+  string sort = 2 [json_name = "sort"];
+  int64 page = 3 [json_name = "page"];
+  int64 page_size = 4 [json_name = "page_size"];
 }
 message ListDeliveryRatingByEaterResponse {
   repeated DeliveryRating ratings = 1 [json_name = "ratings"];

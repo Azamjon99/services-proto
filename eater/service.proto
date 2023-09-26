@@ -33,6 +33,4 @@ service EaterService {
   rpc ListRestaurantRatingByEater(ListRestaurantRatingByEaterRequest) returns (ListRestaurantRatingByEaterResponse);
   rpc RateDelivery(RateDeliveryRequest) returns (RateDeliveryResponse);
   rpc UpdateDeliveryRating(UpdateDeliveryRatingRequest) returns (UpdateDeliveryRatingResponse);
-  rpc ListDeliveryRatingByEater(ListDeliveryRatingByEaterRequest) returns (ListDeliveryRatingByEaterResponse);
-  rpc GetDeliveryRatingByOrder(GetDeliveryRatingByOrderRequest) returns (GetDeliveryRatingByOrderResponse);
 }
