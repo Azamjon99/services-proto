@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ratingservice;
+option go_package = "./logistic-support";
 
 
 message Rating {

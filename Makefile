@@ -9,3 +9,12 @@ gen-eater:
 	--go-grpc_opt=paths=import \
 	-I=$(PWD)/eater \
 	$(PWD)/eater/*.proto
+
+gen-rating:
+	protoc \
+	--go_out=./genprotos \
+	--go_opt=paths=import \
+	--go-grpc_out=./genprotos \
+	--go-grpc_opt=paths=import \
+	-I=$(PWD)/logistic-support \
+	$(PWD)/logistic-support/*.proto
