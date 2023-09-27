@@ -3,8 +3,6 @@ syntax = "proto3";
 option go_package = "./eater";
 
 message RestaurantInfo {
-  string entity_id = 1 [json_name = "entity_id"];
-  string restaurant_id = 2 [json_name = "restaurant_id"];
   string name = 3 [json_name = "name"];
   string image_url = 4 [json_name = "image_url"];
 }
@@ -15,7 +13,6 @@ message AddressInfo {
   double latitude = 4 [json_name = "latitude"];
 }
 message DeliveryInfo {
-  string address_id = 1 [json_name = "address_id"];
   AddressInfo address = 2 [json_name = "address"];
   string time = 3 [json_name = "time"];
   string notes = 4 [json_name = "notes"];
@@ -50,7 +47,7 @@ message OrderItem {
   int32 price = 5 [json_name = "price"];
   int32 total_price = 6 [json_name = "total_price"];
   string created_at = 7 [json_name = "created_at"];
-}
+} 
 message Order {
   string id = 1 [json_name = "id"];
   string eater_id = 2 [json_name = "eater_id"];
@@ -67,7 +64,8 @@ message Order {
 }
 message PlaceOrderRequest {
   string eater_id = 1 [json_name = "eater_id"];
-  Cart cart = 2 [json_name = "cart"];
+  string restaurant_id = 2 [json_name = "restaurant_id"];
+  string instruction = 3 [json_name = "instruction"];
 }
 message PlaceOrderResponse {
   Order order = 1 [json_name = "order"];
@@ -81,6 +79,7 @@ message UpdateOrderResponse {
 message GetOrderRequest {
   string order_id = 1 [json_name = "order_id"];
 }
+
 message GetOrderResponse {
   Order order = 1 [json_name = "order"];
 }

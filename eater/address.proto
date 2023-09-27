@@ -46,6 +46,9 @@ message GetAddressResponse {
 }
 message ListAddressByEaterRequest {
   string eater_id = 1;
+    string sort = 2 [json_name = "sort"];
+  int32 page = 3 [json_name = "page"];
+  int32 page_size = 4 [json_name = "page_size"];
 }
 message ListAddressByEaterResponse {
   repeated Address addresses = 1 [json_name = "addresses"];

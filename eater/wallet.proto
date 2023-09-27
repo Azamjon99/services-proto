@@ -30,6 +30,9 @@ message GetPaymentCardResponse {
 }
 message ListPaymentCardByEaterRequest {
   string eater_id = 1;
+    string sort = 2 [json_name = "sort"];
+  int64 page = 3 [json_name = "page"];
+  int64 page_size = 4 [json_name = "page_size"];
 }
 message ListPaymentCardByEaterResponse {
   repeated PaymentCardView cards = 1 [json_name = "cards"];;
