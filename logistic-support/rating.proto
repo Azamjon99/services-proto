@@ -32,18 +32,8 @@ message GetRatingByOrderRequest {
   string order_id = 1 [json_name = "order_id"];
 }
 
-message CreateRatingResponse {
+message RatingResponse {
   Rating rating = 1 [json_name = "rating"];
 }
 
-message UpdateRatingResponse {
-  Rating rating = 1 [json_name = "rating"];
-}
 
-message GetRatingResponse {
-  Rating rating = 1 [json_name = "rating"];
-}
-
-message GetRatingByOrderResponse {
-  Rating rating = 1 [json_name = "rating"];
-}
