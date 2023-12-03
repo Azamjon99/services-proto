@@ -1,6 +1,11 @@
 syntax = "proto3";
+
 option go_package = "./restaurant_support";
-import "rating.proto";
+
+package restaurant_support;
+
+import "restaurant_support/rating.proto";
+
 service SupportService {
-rpc ListRating(ListRatingRequest) returns (ListRatingResponse);
+    rpc ListRating(ListRatingRequest) returns (ListRatingResponse);
 }
